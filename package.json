@@ -5,6 +5,9 @@
   "repository": "git@github.com:echoLC/jscodeshift-examples.git",
   "author": "luochao <luochao@joyy.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./examples/lodash-to-lodash-es/index.js"
+  },
   "dependencies": {
     "jscodeshift": "^0.13.1"
   }
