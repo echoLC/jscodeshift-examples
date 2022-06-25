@@ -9,12 +9,15 @@ module.exports = function transform(fileInfo, api) {
     })
     .forEach((path) => {
       const value = path.node.source.value
-      const specifier = value.split('/')[1]
+      const id = value.split('/')[1]
+      const [specifier] = path.value.specifiers
+      const local = specifier ? specifier.local.name : id
+
       let newImport
 
-      if (specifier) {
+      if (id) {
         newImport = j.importDeclaration(
-          [j.importSpecifier(j.identifier(specifier))],
+          [j.importSpecifier(j.identifier(id), j.identifier(local))],
           j.stringLiteral('lodash-es')
         )
       } else {
