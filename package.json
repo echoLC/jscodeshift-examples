@@ -1,0 +1,11 @@
+{
+  "name": "jscodeshift-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:echoLC/jscodeshift-examples.git",
+  "author": "luochao <luochao@joyy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jscodeshift": "^0.13.1"
+  }
+}
